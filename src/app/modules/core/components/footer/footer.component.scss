@@ -1,0 +1,147 @@
+.footer {
+  position: relative;
+  margin-top: -.5rem;
+  background-color: #333;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-logo {
+      height: 13rem;
+    }
+    &-header {
+      color: #edf2f4;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-link {
+      padding: 0.5rem;
+      font-size: 1.6rem;
+      color: #edf2f4;
+      text-decoration: none;
+      transition: color 0.3s;
+      &:hover {
+        color: #d62828;
+      }
+    }
+  }
+
+  &__down {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #edf2f4;
+
+    &-links {
+      padding-top: 1em;
+    }
+    &-link {
+      position: relative;
+      &::before {
+        position: absolute;
+        left: 0;
+        width: 0;
+        bottom: -0.3rem;
+        height: 0.2rem;
+        background-color: #edf2f4;
+        transition: width 0.3s;
+        content: "";
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    &-year {
+      margin-top: 1em;
+      &-text {
+        color: #edf2f4;
+      }
+      &-span {
+        color: #edf2f4;
+      }
+    }
+    &-producent {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1em;
+      &-text {
+        color: #edf2f4;
+      }
+      &-logo {
+        display: block;
+        margin: 1em auto;
+        height: 3rem;
+        transition: transform 0.3s;
+        &:hover {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+.header-bg {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: #333;
+  z-index: 0;
+}
+.red {
+  background-color: #c6493a;
+}
+@media (min-width: 768px) {
+  .footer {
+    &__box {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    &__brand {
+      &-logo {
+        height: 20rem;
+      }
+    }
+    &__list {
+      padding: 1.5em 0;
+      align-items: flex-start;
+      &-link {
+        font-size: 1.8rem;
+      }
+    }
+    &__down {
+      flex-direction: row;
+      justify-content: space-around;
+
+      &-producent {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        &-text {
+          padding-right: 0.5em;
+          font-size: 1.6rem;
+        }
+      }
+      &-year {
+        &-text {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}

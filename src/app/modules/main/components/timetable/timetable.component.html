@@ -1,0 +1,16 @@
+<div class="header-section first-header"></div>
+<section class="timetable" id="terminarz">
+  <div class="wrapper">
+    <div class="timetable__cards">
+      <div class="timetable__box" *ngFor="let t of timetable">
+        <img
+          src="assets/img/pin.png"
+          class="timetable__pin"
+          alt="przypinka do kartki"
+        />
+        <h2 class="header timetable__header">{{ t.title }}</h2>
+        <p class="timetable__text">{{ t.date }} {{ t.content }}</p>
+      </div>
+    </div>
+  </div>
+</section>

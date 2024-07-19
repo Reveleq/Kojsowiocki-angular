@@ -1,0 +1,193 @@
+<div class="header-section first-header"></div>
+<section class="news">
+  <h3 class="news__header header">Dodaj Aktualność</h3>
+  <form
+    class="news__form"
+    method="post"
+    (submit)="postNews(news)"
+    #form="ngForm"
+  >
+    <div class="news__form-control">
+      <textarea
+        class="news__form-input news__form-input-text"
+        name="title"
+        [(ngModel)]="news.title"
+        required
+        minlength="2"
+      ></textarea>
+      <label
+        class="news__form-label news__form-label-text"
+        id="title"
+        for="text"
+        >Tytuł</label
+      >
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['title']?.invalid &&
+        form.controls['title'].touched &&
+        form.controls['title'].dirty
+      "
+      ><p
+        class="news__form-error"
+        *ngIf=" form.controls['title'].errors?.['required'] || form.controls['firstTitle'].errors?.['minlength']"
+      >
+        uzupełnij poprawnie pole
+      </p></ng-container
+    >
+    <div class="news__form-control">
+      <textarea
+        class="news__form-input news__form-input-text"
+        name="content"
+        [(ngModel)]="news.content"
+        required
+        minlength="2"
+      ></textarea>
+      <label
+        class="news__form-label news__form-label-text"
+        id="content"
+        for="text"
+        >Główny opis</label
+      >
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['content']?.invalid &&
+        form.controls['content'].touched &&
+        form.controls['content'].dirty
+      "
+      ><p
+        class="news__form-error"
+        *ngIf=" form.controls['content'].errors?.['required'] || form.controls['content'].errors?.['minlength']"
+      >
+        uzupełnij poprawnie pole
+      </p></ng-container
+    >
+    <!-- <div class="news__form-control">
+      <input
+        type="text"
+        name="content"
+        class="news__form-input"
+        required
+        minlength="5"
+        [(ngModel)]="news.content"
+      />
+      <label class="news__form-label" for="content">Główny opis</label>
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['content']?.invalid &&
+        form.controls['content'].touched &&
+        form.controls['content'].dirty
+      "
+      ><p
+        class="news__form-error"
+        *ngIf=" form.controls['content'].errors?.['required'] || form.controls['content'].errors?.['minlength']"
+      >
+        uzupełnij poprawninews
+      </p></ng-container
+    > -->
+    <div class="news__form-control">
+      <div class="news__form-control">
+        <textarea
+          class="news__form-input news__form-input-text"
+          name="content"
+          [(ngModel)]="news.contentDetails"
+          required
+          minlength="2"
+        ></textarea>
+        <label
+          class="news__form-label news__form-label-text"
+          id="content"
+          for="text"
+          >Rozwinięty opis</label
+        >
+      </div>
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['contentDetails']?.invalid &&
+        form.controls['contentDetails'].touched &&
+        form.controls['contentDetails'].dirty
+      "
+      ><p
+        class="news__form-error"
+        *ngIf=" form.controls['content'].errors?.['required'] || form.controls['contentDetails'].errors?.['minlength']"
+      >
+        uzupełnij poprawninews
+      </p></ng-container
+    >
+    <div class="news__form-control">
+      <input
+        type="text"
+        name="src"
+        class="news__form-input"
+        required
+        minlength="5"
+        [(ngModel)]="news.src"
+      />
+      <label class="news__form-label" for="src">Nazwa głównego zdjęcia</label>
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['src']?.invalid &&
+        form.controls['src'].touched &&
+        form.controls['src'].dirty
+      "
+      ><p
+        class="news__form-error"
+        *ngIf=" form.controls['content'].errors?.['required'] || form.controls['src'].errors?.['minlength']"
+      >
+        uzupełnij poprawninews
+      </p></ng-container
+    >
+    <h4 class="news__form-title header">Zdjęcia</h4>
+    <p class="news__form-text">Ilość zdjęć {{ news.srcDetails.length }}</p>
+
+    <div class="news__form-control">
+      <input
+        type="text"
+        name="imgId"
+        class="news__form-input"
+        required
+        minlength="1"
+        [(ngModel)]="srcDeatils.id"
+      />
+      <label class="news__form-label" for="imgId">Numer zdjęcia</label>
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['imgId']?.invalid &&
+        form.controls['imgId'].touched &&
+        form.controls['imgId'].dirty
+      "
+      ><p
+        class="news__form-error"
+        *ngIf=" form.controls['content'].errors?.['required'] || form.controls['imgId'].errors?.['minlength']"
+      >
+        uzupełnij poprawninews
+      </p></ng-container
+    >
+    <div class="news__form-control">
+      <textarea
+        class="news__form-input news__form-input-text"
+        name="imgsrc"
+        [(ngModel)]="srcDeatils.src"
+        required
+        minlength="2"
+      ></textarea>
+      <label class="news__form-label news__form-label-text" for="imgsrc"
+        >Nazwa zdjęcia</label
+      >
+    </div>
+
+    <p class="news__form-text">uzupełnij pola i kliknij</p>
+
+    <button class="news__form-btn" type="button" (click)="addphoto()">
+      Dodaj zdjęcie
+    </button>
+    <button class="news__form-btn" type="submit" [disabled]="!form.valid">
+      Dodaj
+    </button>
+  </form>
+</section>

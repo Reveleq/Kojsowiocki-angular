@@ -1,0 +1,44 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15em;
+  &__header {
+    font-family: "Montserrat", sans-serif;
+    padding: 2em 0 2em;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  &__table {
+    background-color: #fff;
+    min-width: 25rem;
+    width: 95%;
+    max-width: 65rem;
+  }
+  &__th {
+    background-color: #2b2d4a;
+    color: #fff;
+    padding: 0.5em;
+    font-size: 2rem;
+  }
+  &__btn {
+    display: block;
+    padding: 0.5em;
+    margin: 0 auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.3s;
+    text-align: center;
+    &:hover {
+      color: #c6493a;
+    }
+  }
+  &__td {
+    padding: 0.5em;
+    font-size: 1.6rem;
+  }
+}

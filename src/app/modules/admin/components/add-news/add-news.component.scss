@@ -1,0 +1,162 @@
+.news {
+  padding-bottom: 15em;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    padding-top: 3em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 95%;
+    max-width: 35rem;
+    &-title {
+      font-size: 2.3rem;
+    }
+    &-text {
+      margin-bottom: 0.5em;
+      font-size: 2rem;
+    }
+    &-control {
+      position: relative;
+    }
+    &-error {
+      margin: 1em;
+      font-size: 1.6rem;
+      text-align: center;
+      color: #d62828;
+    }
+    &-box {
+      display: flex;
+      padding: 1em;
+      flex-direction: column;
+      width: 95%;
+      max-width: 35rem;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      background-color: #fff;
+    }
+    &-input {
+      padding: 0.6em;
+      margin: 1em;
+      width: 90%;
+      border: 1px solid #b7b7b7;
+      background: none;
+      font-size: 1.8rem;
+      color: #2b2d4a;
+      &-text {
+        padding: 1em;
+        margin: 1em;
+        min-width: 18rem;
+        max-width: 90%;
+        min-height: 25rem;
+        max-height: 25rem;
+        border-radius: 0px;
+        border: 1px solid #b7b7b7;
+        background: none;
+        font-size: 1.8rem;
+        color: #2b2d4a;
+        &:focus ~ .contact__form-label-text {
+          background-color: #fff;
+          transform: translateY(0);
+          color: #d62828;
+          background-color: #edf2f4;
+        }
+        &:valid ~ .contact__form-label-text {
+          transform: translateY(-90%);
+          transition: transform 0s;
+          background-color: #edf2f4;
+        }
+      }
+      &:focus {
+        outline: none;
+        border: 2px solid #2b2d4a;
+      }
+      &:focus ~ .contact__form-label {
+        transform: translateY(-90%);
+        color: #2b2d4a;
+        background-color: #fff;
+      }
+      &:valid ~ .contact__form-label {
+        transform: translateY(-90%);
+        transition: transform 0s;
+        background-color: #fff;
+      }
+    }
+    &-checkbox {
+      margin: 0 0.5em;
+    }
+    &-label {
+      position: absolute;
+      top: 32%;
+      left: 10%;
+      padding: 0 0.5em;
+      font-size: 1.8rem;
+      transition: transform 0.3s;
+      pointer-events: none;
+      transform: translateY(-90%);
+      color: #2b2d4a;
+      background-color: #fff;
+      &-text {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        padding: 0 0.5em;
+        font-size: 1.8rem;
+        transition: transform 0.3s;
+        pointer-events: none;
+      }
+      &-checkbox {
+        font-size: 1.3rem;
+      }
+    }
+    &-more {
+      position: relative;
+      margin-left: 0.2em;
+      cursor: pointer;
+      &-img {
+        width: 1.3rem;
+      }
+      &:hover::before {
+        display: block;
+      }
+      &::before {
+        position: absolute;
+        display: none;
+        bottom: 130%;
+        border: 1px solid #b7b7b7;
+        width: 20rem;
+        padding: 0.5em 1em;
+        content: 'Administatorem danych osobowych jest stowarzyszenie "Kojsowiocki" REGON: 521994299 - Kojszówka 154. Dane wpisane w formularzu kontaktowym będą przetwarzane w celu odpowiedzi na przesłane zapytanie.';
+        background-color: #edf2f4;
+        font-size: 1.4rem;
+        z-index: 20;
+      }
+    }
+    &-btn {
+      display: block;
+      margin: 2em auto;
+      font-family: "Montserrat";
+      padding: 0.5em 3em;
+      background-color: #2b2d4a;
+      border: none;
+      color: #edf2f4;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #d62828;
+      }
+      &:disabled {
+        background-color: #a7a7a7;
+        cursor: default;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+<div class="header-section first-header"></div>
+<section class="concerts">
+  <h3 class="concerts__header header">Panel Koncertów</h3>
+  <form
+    class="concerts__form"
+    method="path"
+    (submit)="pathConcerts(concerts)"
+    #form="ngForm"
+  >
+    <h3 class="concerts__form-title header">Najblizszy koncert</h3>
+
+    <div class="concerts__form-control">
+      <textarea
+        class="concerts__form-input concerts__form-input-text"
+        name="firstTitle"
+        [(ngModel)]="concerts[0].content"
+        required
+        minlength="4"
+      ></textarea>
+      <label
+        class="concerts__form-label concerts__form-label-text"
+        id="content"
+        for="text"
+        >Tytuł</label
+      >
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['firstTitle']?.invalid &&
+        form.controls['firstTitle'].touched &&
+        form.controls['firstTitle'].dirty
+      "
+      ><p
+        class="concerts__form-error"
+        *ngIf=" form.controls['firstTitle'].errors?.['required'] || form.controls['firstTitle'].errors?.['minlength']"
+      >
+        uzupełnij poprawnie pole
+      </p></ng-container
+    >
+    <div class="concerts__form-control">
+      <textarea
+        class="concerts__form-input concerts__form-input-text"
+        name="firstDate"
+        [(ngModel)]="concerts[0].date"
+      ></textarea>
+      <label
+        class="concerts__form-label concerts__form-label-text"
+        id="firstDate"
+        for="text"
+        >Data</label
+      >
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['firstDate']?.invalid &&
+        form.controls['firstDate'].touched &&
+        form.controls['firstDate'].dirty
+      "
+      ><p
+        class="concerts__form-error"
+        *ngIf=" form.controls['firstDate'].errors?.['required'] || form.controls['name'].errors?.['firstDate']"
+      >
+        uzupełnij poprawnie pole
+      </p></ng-container
+    >
+    <h3 class="concerts__form-title header">Ostatni koncert</h3>
+
+    <div class="concerts__form-control">
+      <textarea
+        class="concerts__form-input concerts__form-input-text"
+        name="secondTitle"
+        [(ngModel)]="concerts[1].content"
+        required
+        minlength="4"
+      ></textarea>
+      <label
+        class="concerts__form-label concerts__form-label-text"
+        id="secondTitle"
+        for="text"
+        >Tytuł</label
+      >
+    </div>
+    <ng-container
+      *ngIf="
+        form.controls['secondTitle']?.invalid &&
+        form.controls['secondTitle'].touched &&
+        form.controls['secondTitle'].dirty
+      "
+      ><p
+        class="concerts__form-error"
+        *ngIf=" form.controls['secondTitle'].errors?.['required'] || form.controls['secondTitle'].errors?.['minlength']"
+      >
+        uzupełnij poprawnie pole
+      </p></ng-container
+    >
+
+    <div class="concerts__form-control">
+      <textarea
+        class="concerts__form-input concerts__form-input-text"
+        name="secondDate"
+        [(ngModel)]="concerts[1].date"
+        required
+        minlength="4"
+      ></textarea>
+      <label
+        class="concerts__form-label concerts__form-label-text"
+        id="secondDate"
+        for="text"
+        >Data</label
+      >
+    </div>
+    <ng-container
+    *ngIf="
+      form.controls['secondDate']?.invalid &&
+      form.controls['secondDate'].touched &&
+      form.controls['secondDate'].dirty
+    "
+    ><p
+      class="concerts__form-error"
+      *ngIf=" form.controls['secondTitle'].errors?.['required'] || form.controls['secondTitle'].errors?.['minlength']"
+    >
+      uzupełnij poprawnie pole
+    </p></ng-container
+  >
+    <button class="concerts__form-btn" type="submit" [disabled]="!form.valid">
+      Dodaj
+    </button>
+  </form>
+</section>

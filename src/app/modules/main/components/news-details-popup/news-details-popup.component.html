@@ -1,0 +1,31 @@
+<div class="news__popup">
+  <div class="wrapper">
+    <button class="news__popup-close" (click)="back()">
+      <img
+        class="news__popup-close-img"
+        src="assets/img/x.svg"
+        alt="ikonka x"
+      />
+    </button>
+    <button
+      class="news__popup-btn-next"
+      *ngIf="id < ArrayLength"
+      (click)="nextPopup()"
+    >
+      <img
+        class="news__popup-btn-next-img"
+        src="assets/img/chevron-right.svg"
+        alt="ikonka strzałki w prawo"
+      />
+    </button>
+    <button class="news__popup-btn-back" *ngIf="id > 1" (click)="backPopup()">
+      <img
+        class="news__popup-btn-back-img"
+        src="assets/img/chevron-left.svg"
+        alt="ikonka strzałki w lewo"
+      />
+    </button>
+  </div>
+  <div class="news__popup-bg" (click)="back()"></div>
+  <img class="news__popup-img" src="{{ src }}" />
+</div>

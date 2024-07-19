@@ -1,0 +1,116 @@
+.header-page {
+  top: -5rem;
+  position: relative;
+  margin-bottom: -5rem;
+}
+.header {
+  &-hero {
+    height: 100%;
+    height: 100vh;
+    &__img {
+      position: relative;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+    &__scroll {
+      position: absolute;
+      bottom: 15%;
+      width: 6rem;
+      height: 6rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      &-img {
+        width: 100%;
+      }
+    }
+    &__text {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-img {
+        height: 12em;
+      }
+
+      &-header {
+        padding: 0 2em;
+        font-family: "Montserrat", sans-serif;
+        color: #edf2f4;
+        font-size: 2.5em;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 0.3s;
+        &-second {
+          padding: 0.5em;
+          font-size: 2em;
+          font-weight: 300;
+          color: #edf2f4;
+        }
+      }
+      &-button {
+        margin-top: 2em;
+        padding: 0.7em 2.5em;
+        background-color: #d62828;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #2b2d4a;
+        }
+      }
+    }
+    &__bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s;
+      z-index: -5;
+    }
+  }
+}
+.dark {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 768px) {
+  .header {
+    &-hero {
+      &__text {
+        &-header {
+          font-size: 4em;
+          &-second {
+            font-size: 3em;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .header-page {
+    top: -8rem;
+    margin-bottom: -8rem;
+  }
+  .header {
+    &-hero {
+      &__text {
+        &-header {
+          font-size: 5em;
+          &-second {
+            font-size: 3.5em;
+          }
+        }
+      }
+    }
+  }
+}

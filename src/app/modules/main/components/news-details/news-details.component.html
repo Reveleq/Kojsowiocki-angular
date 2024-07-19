@@ -1,0 +1,28 @@
+<div class="news-details">
+  <div class="news-details__bg">
+    <div class="wrapper">
+      <div class="news-details__box">
+        <h3 class="news-details__box-title header">{{ news.title }}</h3>
+        <div class="news-details__box-cards">
+          <img
+            *ngFor="let img of news.srcDetails"
+            class="news-details__box-img"
+            src="{{ img.src }}"
+            alt="zdjęcie z występu zespołu"
+            routerLink="/aktualnosci/{{ news._id }}/{{ img.id }}"
+            (click)="openModal(news._id, img.id)"
+          />
+        </div>
+        <p class="news-details__box-text">{{ news.contentDetails }}</p>
+        <button class="news-details__close" (click)="back()">
+          <img
+            class="news-details__close-img"
+            src="assets/img/x-black.svg"
+            alt="ikonka x"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<style></style>

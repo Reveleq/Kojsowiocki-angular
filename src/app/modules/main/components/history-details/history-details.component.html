@@ -1,0 +1,21 @@
+<div class="history-details">
+  <div class="history-details__bg" >
+    <div class="wrapper">
+      <div class="history-details__box">
+        <h3 class="history-details__box-title header">{{ timeline.title }}</h3>
+      
+        <img
+          class="history-details__box-img"
+          src="{{ timeline.src }}"
+          alt="zdjęcie z występu zespołu"
+        />
+   
+        <p class="history-details__box-text">{{ timeline.text }}</p>
+        <button class="history-details__close" (click)="back()">
+          <img class="history-details__close-img" src="assets/img/x-black.svg" alt="ikonka x"/>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

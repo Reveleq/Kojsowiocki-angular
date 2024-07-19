@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "json-server",
+      "password": "123",
+      "username": "test"
+    },
+    {
+      "email": "wiktorgiza@interua.pl",
+      "username": "1234",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "email": "wqeqe@eqweq.pl",
+      "username": "123",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "email": "12321@3e2112.pl",
+      "username": "1234",
+      "password": "1234",
+      "id": 4
+    }
+  ],
+  "clients": [
+    {
+      "firstname": "Test2",
+      "surname": "e",
+      "email": "test@gmail.com",
+      "phone": "123456789",
+      "address": "Miasto ul. Testowa 12",
+      "postcode": "111-11",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "firstname": "Test3",
+      "surname": "Testowy",
+      "email": "test@gmail.com",
+      "phone": "123456789",
+      "address": "Miasto ul. Testowa 12",
+      "postcode": "111-11"
+    },
+    {
+      "firstname": "wq",
+      "surname": "wqe",
+      "email": "ewq@dqw",
+      "phone": "+ewqewqeqwe",
+      "address": "ewq",
+      "postcode": "22-222",
+      "id": 4
+    }
+  ]
+}

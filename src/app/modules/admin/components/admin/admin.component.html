@@ -1,0 +1,27 @@
+<div class="header-section first-header"></div>
+<section class="admin">
+  <h3 class="admin__header header">Panel Administatora</h3>
+  <button class="admin__btn" (click)="logout()">
+    wyloguj
+  </button>
+  <div class="admin__cards">
+    <div class="admin__card">
+      <h4 class="admin__card-title header">Koncerty</h4>
+      <button class="admin__card-btn" routerLink="/admin/panel/koncerty">
+        Przejdź
+      </button>
+    </div>
+    <div class="admin__card">
+      <h4 class="admin__card-title header">Trofea</h4>
+      <button class="admin__card-btn" routerLink="/admin/panel/trofea">
+        Przejdź
+      </button>
+    </div>
+    <div class="admin__card">
+      <h4 class="admin__card-title header">Aktualnosci</h4>
+      <button class="admin__card-btn" routerLink="/admin/panel/aktualnosci">
+        Przejdź
+      </button>
+    </div>
+  </div>
+</section>

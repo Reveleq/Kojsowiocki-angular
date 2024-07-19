@@ -1,0 +1,107 @@
+<nav class="desktop-nav">
+  <a class="desktop-nav__brand-link" routerLink="/">
+    <img
+      src="assets/img/Logo black transparent.png"
+      alt="logo zespołu"
+      class="desktop-nav__brand-link-img"
+    />
+  </a>
+  <a
+    routerLink="/o-nas"
+    routerLinkActive="desktop-nav__link-active"
+    class="desktop-nav__link"
+    >O nas</a
+  >
+  <a
+    routerLink="/historia"
+    routerLinkActive="desktop-nav__link-active"
+    class="desktop-nav__link"
+    >Historia</a
+  >
+  <a
+    class="desktop-nav__link"
+    routerLinkActive="desktop-nav__link-active"
+    routerLink="/trofea"
+    >Trofea</a
+  >
+  <a
+    routerLink="/aktualnosci"
+    routerLinkActive="desktop-nav__link-active"
+    class="desktop-nav__link"
+    >Aktualności</a
+  >
+  <a
+    routerLink="/kontakt"
+    routerLinkActive="desktop-nav__link-active"
+    class="desktop-nav__link"
+    >Kontakt</a
+  >
+</nav>
+<nav class="mobile-nav">
+  <div class="mobile-nav__brand">
+    <a class="mobile-nav__brand-link" routerLink="/" (click)="hideNavBrand()">
+      <img
+        src="assets/img/Logo black transparent.png"
+        alt="logo zespołu"
+        class="mobile-nav__brand-img"
+    /></a>
+  </div>
+  <button
+    *ngIf="!activeMobileNav"
+    class="mobile-nav__btn"
+    (click)="activeNav()"
+  >
+    <img
+      src="assets/img/menu-3.svg"
+      alt="przycisk otwierający mobilną nawigację"
+      class="mobile-nav__btn-img"
+    />
+  </button>
+  <button *ngIf="activeMobileNav" class="mobile-nav__btn" (click)="hideNav()">
+    <img
+      src="assets/img/x.svg"
+      alt="przycisk zamykający mobilną navigację"
+      class="mobile-nav__close-btn-img"
+    />
+  </button>
+  <div class="mobile-nav__links" [ngClass]="slide">
+    <a
+      routerLinkActive="mobile-nav__link-active"
+      routerLink="/o-nas"
+      class="mobile-nav__link"
+      href="#o-nas"
+      (click)="hideNav()"
+      >O nas</a
+    >
+    <a
+      routerLinkActive="mobile-nav__link-active"
+      routerLink="/historia"
+      class="mobile-nav__link"
+      (click)="hideNav()"
+    >
+      Historia</a
+    >
+    <a
+      routerLinkActive="mobile-nav__link-active"
+      routerLink="/trofea"
+      class="mobile-nav__link"
+      (click)="hideNav()"
+    >
+      Trofea</a
+    >
+    <a
+      routerLinkActive="mobile-nav__link-active"
+      routerLink="/aktualnosci"
+      class="mobile-nav__link"
+      (click)="hideNav()"
+      >Aktualności</a
+    >
+    <a
+      routerLinkActive="mobile-nav__link-active"
+      [routerLink]="'/kontakt'"
+      class="mobile-nav__link"
+      (click)="hideNav()"
+      >Kontakt</a
+    >
+  </div>
+</nav>

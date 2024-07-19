@@ -1,0 +1,23 @@
+<div class="header-section first-header"></div>
+<section class="achievements" id="trofea">
+  <div class="wrapper">
+    <h3 class="achievements__header header">Trofea</h3>
+    <div class="achievements__cards">
+      <div class="achievements__card" *ngFor="let achievement of achievements">
+        <button
+          class="achievements__btn first"
+          routerLink="/trofea/{{ achievement._id }}"
+        >
+          <img
+            class="achievements__img"
+            src="{{ achievement.src }}"
+            alt="statuetka zespołu"
+          />
+        </button>
+        <p class="achievements__text">
+          {{ achievement.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

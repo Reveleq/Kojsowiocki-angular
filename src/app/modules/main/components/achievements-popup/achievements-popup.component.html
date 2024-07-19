@@ -1,0 +1,31 @@
+<div class="achievements__popup">
+  <div class="wrapper">
+    <button class="achievements__popup-close" (click)="back()">
+      <img class="achievements__popup-close-img" src="assets/img/x.svg" />
+    </button>
+    <button
+      class="achievements__popup-btn-next"
+      (click)="nextPopup()"
+      *ngIf="index + 1 < length"
+    >
+      <img
+        class="achievements__popup-btn-next-img"
+        src="assets/img/chevron-right.svg"
+        alt="ikonka strzałki w prawo"
+      />
+    </button>
+    <button
+      class="achievements__popup-btn-back"
+      *ngIf="index > 0"
+      (click)="backPopup()"
+    >
+      <img
+        class="achievements__popup-btn-back-img"
+        src="assets/img/chevron-left.svg"
+        alt="ikonka strzałki w lewo"
+      />
+    </button>
+  </div>
+  <div class="achievements__popup-bg" (click)="back()"></div>
+  <img class="achievements__popup-img" src="{{ src }}" />
+</div>

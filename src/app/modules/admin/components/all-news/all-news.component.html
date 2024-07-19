@@ -1,0 +1,22 @@
+<div class="header-section first-header"></div>
+<section class="admin">
+  <h3 class="admin__header title">Lista Aktualności</h3>
+  <table class="admin__table">
+    <tr class="admin__tr">
+      <th class="admin__th">Tytuł</th>
+
+      <th class="admin__th">Edytuj</th>
+    </tr>
+    <tr *ngFor="let news of news">
+      <td class="admin__td">{{ news.title }}</td>
+      <td class="admin__td">
+        <button
+          class="admin__btn"
+          [routerLink]="'/admin/panel/aktualnosci/edytuj/' + news._id"
+        >
+          +
+        </button>
+      </td>
+    </tr>
+  </table>
+</section>

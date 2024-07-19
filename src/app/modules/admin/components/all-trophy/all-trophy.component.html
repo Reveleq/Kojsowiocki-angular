@@ -1,0 +1,21 @@
+<div class="header-section first-header"></div>
+<section class="admin">
+  <h3 class="admin__header title">Lista trofeów</h3>
+  <table class="admin__table">
+    <tr class="admin__tr">
+      <th class="admin__th">Tytuł</th>
+      <th class="admin__th">Edytuj</th>
+    </tr>
+    <tr *ngFor="let trophy of trophies">
+      <td class="admin__td">{{ trophy.title }}</td>
+      <td class="admin__td">
+        <button
+          class="admin__btn"
+          [routerLink]="'/admin/panel/trofea/edytuj/' + trophy._id"
+        >
+          +
+        </button>
+      </td>
+    </tr>
+  </table>
+</section>

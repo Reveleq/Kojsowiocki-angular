@@ -1,0 +1,26 @@
+<header class="header-page">
+  <section class="header-hero">
+    <div
+      class="header-hero__img"
+      style="background-image: url('assets/img/header-landscape.jpeg')"
+    >
+      <div class="header-hero__bg" [ngClass]="darkNav"></div>
+      <div class="header-hero__text" [ngClass]="opacityNav">
+        <h1 class="header-hero__text-header">
+          Tradycja w brzmieniu, zespół w sercu
+        </h1>
+        <span class="header-hero__text-header-second">Kojsowiocki</span>
+        <button class="header-hero__text-button" [routerLink]="['/kontakt']">
+          Kontakt
+        </button>
+        <button class="header-hero__scroll heartbeat" (click)="scroll()">
+          <img
+            src="assets/img/chevron-down.svg"
+            class="header-hero__scroll-img"
+            alt="ikonka strzałki"
+          />
+        </button>
+      </div>
+    </div>
+  </section>
+</header>

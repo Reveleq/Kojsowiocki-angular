@@ -1,0 +1,65 @@
+<div class="header-section first-header"></div>
+<section class="history" id="historia">
+  <h3 class="history__header header">Historia</h3>
+  <div class="history__time-box">
+    <div data-aos="fade-right" class="history__box">
+      <p class="history__text">
+        Zespół regionalny „Kojsowiocki” działa od września 2016 roku przy Izbie
+        Regionalnej znajdującej się w Szkole Podstawowej im. Fryderyka Chopina w
+        Kojszówce i jest kontynuacją innowacji pedagogicznej nauczycielek:
+        Teresy Sikora i Marzeny Wątlikiewicz.
+      </p>
+    </div>
+    <img
+      src="assets/img/stare-kojsowiocki.jpg"
+      alt="zdjęcie zespołu podczas pierwszego występu"
+      class="history__img"
+    />
+  </div>
+  <div class="history__time-box second-time-box">
+    <div data-aos="fade-left" class="history__box">
+      <p class="history__text">
+        Wcześniej działał zespół „Kojszowiacy”, który powstał w wyniku
+        realizacji projektu unijnego przy Ochotniczej Straży Pożarnej w
+        Kojszówce. Na bazie tego zespołu powstał szkolny zespół „Kojsowiocki”
+        zrzeszający uczniów szkoły w Kojszówce.
+      </p>
+    </div>
+    <img
+      src="assets/img/kojszowiacy.jpg"
+      alt="zdjęcie starego składu zespołu"
+      class="history__img"
+    />
+  </div>
+  <div class="history__time-box">
+    <div data-aos="fade-right" class="history__box">
+      <p class="history__text">
+        Obecnie zespołem opiekuje się Marzena Wątlikiewicz, a kapelę nadal
+        przygotowują Agnieszka Pająk i ks. Grzegorz Stachowski.
+      </p>
+    </div>
+    <img
+      src="assets/img/history-third.jpg"
+      alt="zdjęcie aktualnego składu zespołu"
+      class="history__img"
+    />
+  </div>
+  <section id="os-czasu">
+    <h3 class="history__header-timeline header">
+      Wydarzenia w pierwszym roku istnienia zespołu
+    </h3>
+
+    <div data-aos="fade-left" class="history__timeline">
+      <div class="history__timeline-line"></div>
+      <div [class]="timeline.class" *ngFor="let timeline of timeline">
+        <a
+          routerLink="/historia/{{ timeline._id }}"
+     
+          class="history__timeline-link"
+          ><span class="history__timeline-header">{{ timeline.date }}</span>
+          <p class="history__timeline-text-p">{{ timeline.title }}</p></a
+        >
+      </div>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,23 @@
+<div class="header-section first-header"></div>
+<section class="news" id="aktualnosci">
+  <h3 class="news__header header">Aktualności</h3>
+  <div class="news__cards news-expanded">
+    <div
+      *ngFor="let news of news"
+      class="news__card news-expanded__card"
+    >
+      <h4 class="news__card-header">{{ news.title }}</h4>
+      <img
+        src="{{ news.src }}"
+        alt="zdjęcie zespołu z koncertu"
+        class="news__card-img"
+      />
+      <p class="news__card-text">
+        {{ news.content }}
+      </p>
+      <a routerLink="/aktualnosci/{{ news._id }}" class="news__card-link"
+        >Czytaj więcej</a
+      >
+    </div>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+.achievements {
+  position: relative;
+  padding-bottom: 20em;
+  background-color: #edf2f4;
+  &__header{
+    color: #2b2d4a;
+  }
+  &__cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    margin: 3em;
+    width: 25rem;
+    height: 37rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    &-header {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+  &__text {
+    margin: 1em 0.5em;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #2b2d4a;
+  }
+  &__btn {
+    border: none;
+    height: 17rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+  &__img {
+    height: 100%;
+  }
+}
+@media (min-width: 375px) {
+  .achievements {
+    &__btn {
+      height: 20rem;
+    }
+    &__popup-img {
+      height: 65%;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .achievements {
+    &__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__card {
+      margin: 5em;
+    }
+    &__link {
+      padding: 1em;
+    }
+    &__text {
+      font-size: 2rem;
+    }
+    &__popup-img {
+      height: 75%;
+    }
+  }
+}

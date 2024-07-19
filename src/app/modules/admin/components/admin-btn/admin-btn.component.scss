@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative;
+}
+.admin-btn {
+  position: fixed;
+  bottom: 3%;
+  left: 3%;
+  height: 6rem;
+  width: 6rem;
+  background-color: #2b2d4a;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  opacity: 1;
+  transition: background-color 0.3s, transform 0.3s, right 0.4s;
+  z-index: 20;
+  &:hover {
+    background-color: #d62828;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+  }
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    transition: background-color 0.3s;
+  }
+}
