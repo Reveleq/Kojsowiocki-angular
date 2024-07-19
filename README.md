@@ -1,7 +1,7 @@
 
 # KOJSOWIOCKI-ANGULAR
 
-Regional team website design created using Angular Express and MongodB. The page contains sections:
+Regional team website design created using: Angular, Express and MongodB. The page contains sections:
 - About us
 - History
 - Achievements
